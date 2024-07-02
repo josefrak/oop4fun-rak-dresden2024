@@ -27,10 +27,22 @@ public class Fly extends Actor
     public void act()
     {
         // Add your action code here.
-        this.setRotation(this.getRotation()+Greenfoot.getRandomNumber(20)-10);
+        /*this.setRotation(this.getRotation()+Greenfoot.getRandomNumber(20)-10);
         if (this.isAtEdge()){
             this.setRotation(this.getRotation()+180);
-        }    
-        this.move((int)speed);
+        }    */
+        if (Greenfoot.isKeyDown("w")){
+            this.setLocation(this.getX(),this.getY()-(int)speed);
+        }
+        if (Greenfoot.isKeyDown("s")){
+            this.setLocation(this.getX(),this.getY()+(int)speed);
+        }
+        if (Greenfoot.isKeyDown("d")){
+            this.setLocation(this.getX()+(int)speed,this.getY());
+        }
+        if (Greenfoot.isKeyDown("a")){
+            this.setLocation(this.getX()-(int)speed,this.getY());
+        }  
+        /*this.move((int)speed);*/
     }
 }
