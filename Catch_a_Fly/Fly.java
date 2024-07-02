@@ -43,6 +43,10 @@ public class Fly extends Actor
         if (Greenfoot.isKeyDown("a")){
             this.setLocation(this.getX()-(int)speed,this.getY());
         }  
+        if (Greenfoot.isKeyDown("space")){
+            World myWorld = this.getWorld();
+            myWorld.addObject(new Poison(), this.getX(), this.getY());
+        }          
         /*this.move((int)speed);*/
     }
 }
