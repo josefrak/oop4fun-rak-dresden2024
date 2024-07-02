@@ -36,5 +36,10 @@ public class Man extends Actor
             Fly catchedFly = (Fly)this.getOneIntersectingObject(Fly.class);
             catchedFly.catched(this.getX(),this.getY());
         }
+        if (this.isTouching(Poison.class)){
+            World myWorld = this.getWorld();
+            myWorld.showText("GAME OVER", 250, 180);  
+            Greenfoot.stop();
+        }
     }
 }
