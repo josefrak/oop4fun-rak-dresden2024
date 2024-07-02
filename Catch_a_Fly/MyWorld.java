@@ -19,5 +19,6 @@ public class MyWorld extends World
         super(600, 400, 1);
         this.addObject(new Man(), 300, 200);
         this.addObject(new Fly(), 50, 50);
+        this.addObject(new Bee(), 450, 350);
     }
 }
