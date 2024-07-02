@@ -38,7 +38,10 @@ public class Man extends Actor
                 Greenfoot.delay(1);
             }
             Enemy catchedEnemy = (Enemy)this.getOneIntersectingObject(Enemy.class);
+            World myWorld = this.getWorld();
+            
             catchedEnemy.catched(this.getX(),this.getY());
+            myWorld.showText("Catched: "+Enemy.countAll, 100, 100);
         }
         if (this.isTouching(Poison.class)){
             World myWorld = this.getWorld();

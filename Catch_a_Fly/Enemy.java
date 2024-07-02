@@ -12,7 +12,7 @@ public abstract class Enemy extends Actor
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-
+    static int countAll=0;
     double speed;
     int count;    
     String up, down, left, right, poison;

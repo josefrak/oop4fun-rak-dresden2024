@@ -18,6 +18,7 @@ public class Bee extends Enemy
     }    
     public void catched(int x, int y){
         count++;
+        Enemy.countAll++;
         this.setLocation( (x+300)%600, (y+200)%400);
         World myWorld = this.getWorld();
         myWorld.showText("Catched bees: "+count, 100, 40);
