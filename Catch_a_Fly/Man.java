@@ -32,13 +32,13 @@ public class Man extends Actor
         if (mouse!=null){
             this.setLocation(mouse.getX(), mouse.getY());
         }
-        if (this.isTouching(Fly.class)){
+        if (this.isTouching(Enemy.class)){
             for(int i=1;i<=10;i++){
                 this.setRotation(this.getRotation()+36);
                 Greenfoot.delay(1);
             }
-            Fly catchedFly = (Fly)this.getOneIntersectingObject(Fly.class);
-            catchedFly.catched(this.getX(),this.getY());
+            Enemy catchedEnemy = (Enemy)this.getOneIntersectingObject(Enemy.class);
+            catchedEnemy.catched(this.getX(),this.getY());
         }
         if (this.isTouching(Poison.class)){
             World myWorld = this.getWorld();

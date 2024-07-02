@@ -18,7 +18,7 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         this.addObject(new Man(), 300, 200);
-        this.addObject(new Fly(), 50, 50);
-        this.addObject(new Bee(), 450, 350);
+        this.addObject(new Fly("w","s","a","d","space"), 50, 50);
+        this.addObject(new Bee("8","2","4","6","5"), 450, 350);
     }
 }
