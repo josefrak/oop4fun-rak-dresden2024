@@ -16,7 +16,7 @@ public class Man extends Actor
     public void act()
     {
         // Add your action code here.
-        if (Greenfoot.isKeyDown("UP")){
+        /*if (Greenfoot.isKeyDown("UP")){
             this.setLocation(this.getX(),this.getY()-speed);
         }
         if (Greenfoot.isKeyDown("DOWN")){
@@ -27,7 +27,11 @@ public class Man extends Actor
         }
         if (Greenfoot.isKeyDown("LEFT")){
             this.setLocation(this.getX()-speed,this.getY());
-        }  
+        }  */
+        MouseInfo mouse = Greenfoot.getMouseInfo();
+        if (mouse!=null){
+            this.setLocation(mouse.getX(), mouse.getY());
+        }
         if (this.isTouching(Fly.class)){
             for(int i=1;i<=10;i++){
                 this.setRotation(this.getRotation()+36);
